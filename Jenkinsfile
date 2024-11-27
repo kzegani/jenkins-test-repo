@@ -13,6 +13,12 @@ pipeline {
                 echo "Building..."
                 sh '''
                     echo "Doing Some Build Stuff..."
+                    ls -la
+                    python3 helloworld.py > resultFile.txt
+                    ls -la
+                    cat resultFile.txt
+                    rm -rf resultFile.txt
+                    ls -la
                 '''
             }
         }
